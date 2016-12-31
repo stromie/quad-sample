@@ -10,13 +10,15 @@
 
 <div id="menu" class="menu">
 
-    <a id="menu-rooms" href="index.php">
-        <img class="icon" src="{{ page == 'index' ? icon1 : icon0 }}control_building_empty.png"/></a>
+	<a id="menu-rooms" data-ajax="false" href="index.php">
+        <img class="icon {{ page starts with 'index' or page starts with 'room' ? 'icon1' }}" src="{{ icon0 }}control_building_empty.svg"/></a>
 
-    
-    <a id="menu-system" href="index.php?page=config">
-        <img class="icon" src="{{ page == 'config' ? icon1 : icon0 }}edit_settings.png"/></a>
-  
+			<a id="menu-sound" data-ajax="false" href="index.php?page=03.sound">		
+		<img class="icon {{ page == 'squeezebox' ? 'icon1' }}" src="{{ icon0 }}audio_audio.svg"/></a>
+		
+	<a id="menu-system" data-ajax="false" href="index.php?page=config">
+		<img class="icon {{ page == 'config' ? 'icon1' }}" src="{{ icon0 }}edit_settings.svg"/></a>
+
 /**
  * -----------------------------------------------------------------------------
  * visu.notifybadge

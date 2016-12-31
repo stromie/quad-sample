@@ -14,7 +14,7 @@ Wohnen
 {% endblock %}
 
 {% block header %}
-<img class="icon" src='{{ icon0 }}it_television.png'/>
+<img class="icon" src='{{ icon0 }}it_television.svg'/>
 {% endblock %}
 
 {% block content %}
@@ -22,8 +22,8 @@ Wohnen
 <ul data-role="listview" data-dividertheme="c" class="nw_list">
     <li data-role="list-divider">Beleuchtung</li>  
     {{ list.dimmer('eg.wohnen.licht','Deckenleuchte','eg.wohnzimmer.licht_decke.switch','eg.wohnzimmer.licht_decke.dim') }}
-    {{ list.switch('eg.wohnen.licht_tv','TV-Backlight','eg.wohnzimmer.std_tv_licht.switch','',icon1~'message_socket.png',icon0~'message_socket.png') }}
-    {{ list.switch('eg.wohnen.licht_sideboard','Sideboard-Backlight','eg.wohnzimmer.std_sideboard_licht.switch','',icon1~'message_socket.png',icon0~'message_socket.png') }}
+    {{ list.switch('eg.wohnen.licht_tv','TV-Backlight','eg.wohnzimmer.std_tv_licht.switch','','message_socket.svg','message_socket.svg') }}
+    {{ list.switch('eg.wohnen.licht_sideboard','Sideboard-Backlight','eg.wohnzimmer.std_sideboard_licht.switch','','message_socket.svg','message_socket.svg') }}
     {{ list.dimmer('eg.essenzimmer','Esstisch','eg.esszimmer.licht_decke.switch','eg.esszimmer.licht_decke.dim') }}
     <li data-role="list-divider">Steckdosen</li> 
     {{ list.flip('flip_std_fernseher','Fernseher','eg.wohnzimmer.std_tv.switch','uzsu.eg_wohnzimmer_std_tv','an','aus') }}
@@ -39,7 +39,7 @@ Wohnen
 <ul data-role="listview" data-dividertheme="c" class="nw_list">
     <li data-role="list-divider">Verstärker</li>  
     {{ list.slider('volume', 'Volume', 'mm.denon.main.MasterVolume', 0, 25, 1) }}
-    {{ list.mswitch('powe_mute', 'Power / Mute ',['mm.denon.main.Power','mm.denon.main.Mute'], '', ['','icons/or/audio_volume_mute.png'],['','icons/ws/audio_volume_high.png'])}}
+    {{ list.mswitch('powe_mute', 'Power / Mute ',['mm.denon.main.Power','mm.denon.main.Mute'], '', ['','icons/or/audio_volume_mute.svg'],['','icons/ws/audio_volume_high.svg'])}}
 </ul>
 
     /**AVR*/

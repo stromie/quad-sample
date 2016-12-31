@@ -14,14 +14,14 @@ Zaehler
 {% endblock %}
 
 {% block header %}
-<img class="icon" src='{{ icon0 }}measure_power_meter.png'/>
+<img class="icon" src='{{ icon0 }}measure_power_meter.svg'/>
 {% endblock %}
 
 {% block quad_main_top %}
     
 {% import "widget_list.html" as list %}
 <ul data-role="listview" data-dividertheme="c" class="nw_list">
-    {{ list.mstring('string', '',['Haushalt','WP'],['icons/ws/measure_power_meter.png','icons/ws/sani_heating.png'])}}
+    {{ list.mstring('string', '',['Haushalt','WP'],['icons/ws/measure_power_meter.svg','icons/ws/sani_heating.svg'])}}
     {{ list.mfloat('akt_leistung', 'Aktuelle Leistung', ['zaehler.haushalt.leistung','zaehler.wp.cop.tag'], ['kW','cop']) }}
     {{ list.mfloat('verbrauch_heute', 'Verbrauch Heute', ['zaehler.haushalt.verbrauch.tag','zaehler.wp.verbrauch.tag'], ['kWh','kWh']) }}
     {{ list.mfloat('verbrauch_gestern', 'Verbrauch Gestern', ['zaehler.haushalt.verbrauch.gestern','zaehler.wp.verbrauch.gestern'], ['kWh','kWh']) }}

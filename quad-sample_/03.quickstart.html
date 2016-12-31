@@ -14,7 +14,7 @@ Quickstart
 {% endblock %}
 
 {% block header %}
-<img class="icon" src='{{ icon0 }}control_all_on_off.png'/>
+<img class="icon" src='{{ icon0 }}control_all_on_off.svg'/>
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@ Quickstart
 <ul data-role="listview" data-dividertheme="c" class="nw_list">
     <li data-role="list-divider">Wärmepumpe</li>
     {{ list.float('wp.temp_ww', 'Wasserspeicher', 'ebus.ww_temp', '°C') }}
-    {{ list.button('trigger_speicher1', 'Speicherladung aktivieren', 'ebus.speicherladung', 'Start', 'icons/ws/control_on_off.png', '1') }}
+    {{ list.button('trigger_speicher1', 'Speicherladung aktivieren', 'ebus.speicherladung', 'Start', 'icons/ws/control_on_off.svg', '1') }}
 </ul>
 
 {% endblock %}

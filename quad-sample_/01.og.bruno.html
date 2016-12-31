@@ -14,15 +14,15 @@ Bruno
 {% endblock %}
 
 {% block header %}
-<img class="icon" src='{{ icon0 }}scene_childs_room.png'/>
+<img class="icon" src='{{ icon0 }}scene_childs_room.svg'/>
 {% endblock %}
 
 {% block content %}
 {% import "widget_list.html" as list %}
 <ul data-role="listview" data-dividertheme="c" class="nw_list">
     {{ list.dimmer('og.bruno.licht', 'Bruno', 'og.bruno.licht_decke.switch', 'og.bruno.licht_decke.dim') }}    
-    {{ list.switch('eg.bruno.std_fenster','Nachtlicht Fenster','og.bruno','',icon1~'message_socket.png',icon0~'message_socket.png') }}
-    {{ list.switch('eg.bruno.std_bett','Lampe Bett','og.bruno','',icon1~'message_socket.png',icon0~'message_socket.png') }}
+    {{ list.switch('eg.bruno.std_fenster','Nachtlicht Fenster','og.bruno','','message_socket.svg','message_socket.svg') }}
+    {{ list.switch('eg.bruno.std_bett','Lampe Bett','og.bruno','','message_socket.svg','message_socket.svg') }}
 </ul>
 {% endblock %}
 

@@ -17,7 +17,7 @@ Samples
 {% endblock %}
 
 {% block header %}
-<img class="icon" src='{{ icon0 }}measure_power_meter.png'/>
+<img class="icon" src='{{ icon0 }}measure_power_meter.svg'/>
 {% endblock %}
 
 {% block content %}
@@ -30,10 +30,10 @@ Samples
         {{ plot.period('ptag1', 'zaehler.haushalt.verbrauch.gestern', 'avg', '1w', '', '', '', '', 'Haushalt', '#aa0', 'area', '', '') }}
         </div>
     </div>
-    {{ list.plotpopup('plot0', 'Überschrift0', 'Text0', 'icons/ws/measure_power_meter.png', 'zaehler.haushalt.verbrauch.gestern', 'avg', '1w', '', '', '', '', 'Haushalt', '#aa0', 'area', '', '') }}    
-    {{ list.plotpopup('plot1', 'Überschrift1', ['Text1','Text2'], ['icons/ws/measure_power_meter.png',''], ['zaehler.haushalt.verbrauch.gestern','zaehler.wp.verbrauch.gestern'], ['avg','avg'], ['1w','2w'], ['',''], ['',''], ['',''], ['',''], ['Haushalt','WP'], ['#aa0','#a00'], ['area','line'], ['',''], ['','']) }}
-    {{ list.plotpopup('plot2', 'Überschrift2', ['Text1','Text2',' '], ['icons/ws/measure_power_meter.png','',''], ['zaehler.haushalt.verbrauch.gestern','zaehler.wp.verbrauch.gestern',''], ['avg','avg',''], ['1w','2w',''], ['','',''], ['','',' '], ['','',''], ['','',''], ['Haushalt','WP',''], ['#aa0','#a00',''], ['area','line',''], ['','',''], ['','','']) }}
-    {{ list.plotpopup('plot3', 'Überschrift3', ['Text1',' ','Text3'], ['icons/ws/measure_power_meter.png',' ','icons/ws/measure_power_meter.png'], ['zaehler.haushalt.verbrauch.gestern',' ','zaehler.wp.verbrauch.gestern'], ['avg','','avg'], ['1w','','2w'], ['','',''], ['','',''], ['','',''], ['','',''], ['Haushalt','','WP'], ['#aa0','','#a00'], ['area','','line'], ['','',''], ['','','']) }}
+    {{ list.plotpopup('plot0', 'Überschrift0', 'Text0', 'icons/ws/measure_power_meter.svg', 'zaehler.haushalt.verbrauch.gestern', 'avg', '1w', '', '', '', '', 'Haushalt', '#aa0', 'area', '', '') }}    
+    {{ list.plotpopup('plot1', 'Überschrift1', ['Text1','Text2'], ['icons/ws/measure_power_meter.svg',''], ['zaehler.haushalt.verbrauch.gestern','zaehler.wp.verbrauch.gestern'], ['avg','avg'], ['1w','2w'], ['',''], ['',''], ['',''], ['',''], ['Haushalt','WP'], ['#aa0','#a00'], ['area','line'], ['',''], ['','']) }}
+    {{ list.plotpopup('plot2', 'Überschrift2', ['Text1','Text2',' '], ['icons/ws/measure_power_meter.svg','',''], ['zaehler.haushalt.verbrauch.gestern','zaehler.wp.verbrauch.gestern',''], ['avg','avg',''], ['1w','2w',''], ['','',''], ['','',' '], ['','',''], ['','',''], ['Haushalt','WP',''], ['#aa0','#a00',''], ['area','line',''], ['','',''], ['','','']) }}
+    {{ list.plotpopup('plot3', 'Überschrift3', ['Text1',' ','Text3'], ['icons/ws/measure_power_meter.svg',' ','icons/ws/measure_power_meter.svg'], ['zaehler.haushalt.verbrauch.gestern',' ','zaehler.wp.verbrauch.gestern'], ['avg','','avg'], ['1w','','2w'], ['','',''], ['','',''], ['','',''], ['','',''], ['Haushalt','','WP'], ['#aa0','','#a00'], ['area','','line'], ['','',''], ['','','']) }}
     
     <li data-role="list-divider">mvalue</li>
     {{ list.mvalue('mvalue1', 'Alle', ['zaehler.haushalt.leistung','zaehler.wp.cop.tag','zaehler.wp.leistung'], ['kW','COP','kW']) }}
@@ -49,7 +49,7 @@ Samples
     {{ list.mswitch('mswitch5', 'Dreispaltig mitte leer', ['gad1',' ','gad2'],['gad1.uzsu','',''], '' , '') }}
     
     <li data-role="list-divider">mstring</li>
-    {{ list.mstring('string1', 'Überschrift',['Spalte1','Spalte2','Spalte 3'],['icons/ws/measure_power_meter.png','icons/ws/message_socket.png','icons/ws/sani_heating.png'])}}
+    {{ list.mstring('string1', 'Überschrift',['Spalte1','Spalte2','Spalte 3'],['icons/ws/measure_power_meter.svg','icons/ws/message_socket.svg','icons/ws/sani_heating.svg'])}}
     {{ list.mstring('string2', 'Alle',['Spalte1','Spalte2','Spalte 3'])}}
     {{ list.mstring('string3', 'Zweispaltig',['Spalte1','Spalte2'])}}
     {{ list.mstring('string4', 'Dreispaltig mitte leer',['Spalte1',' ','Spalte 3'])}}
@@ -68,9 +68,9 @@ Samples
 
 
 {% block quad_top %}
-{{ visu.activelist('active1', 'eg.flur_klein.licht_decke.switch', 'Flur klein', icon1~'light_light.png', icon0~'light_light.png') }}
-{{ visu.activelist('active2', 'eg.flur_gross.licht_decke.switch', 'Flur gross', icon1~'light_light.png', icon0~'light_light.png') }}
-{{ visu.activelist('active3',  'eg.wohnzimmer.std_sideboard_licht.switch', 'Sideboard',  icon1~'message_socket.png', icon0~'message_socket.png', '1', '0') }}
+{{ visu.activelist('active1', 'eg.flur_klein.licht_decke.switch', 'Flur klein', 'light_light.svg', 'light_light.svg') }}
+{{ visu.activelist('active2', 'eg.flur_gross.licht_decke.switch', 'Flur gross', 'light_light.svg', 'light_light.svg') }}
+{{ visu.activelist('active3',  'eg.wohnzimmer.std_sideboard_licht.switch', 'Sideboard',  'message_socket.svg', 'message_socket.svg', '1', '0') }}
 {% endblock %}
 
 {% block quad_bottom %}

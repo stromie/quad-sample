@@ -15,7 +15,7 @@ Licht
 {% endblock %}
 
 {% block header %}
-<img class="icon" src='{{ icon0 }}light_light.png'/>
+<img class="icon" src='{{ icon0 }}light_light.svg'/>
 {% endblock %}
 
 {% block content %}
@@ -25,8 +25,8 @@ Licht
     {{ list.dimmer('eg.kueche.licht','Küche','eg.kueche.licht_decke.switch','eg.kueche.licht_decke.dim') }}
     {{ list.dimmer('eg.essenzimmer','Essen','eg.esszimmer.licht_decke.switch','eg.esszimmer.licht_decke.dim') }}
     {{ list.dimmer('eg.wohnen.licht','Wohnen','eg.wohnzimmer.licht_decke.switch','eg.wohnzimmer.licht_decke.dim') }}
-    {{ list.switch('eg.wohnen.licht_tv','TV-Backlight','eg.wohnzimmer.std_tv_licht.switch', '', icon1~'message_socket.png', icon0~'message_socket.png') }}
-    {{ list.switch('eg.wohnen.licht_sideboard','Sideboard-Backlight','eg.wohnzimmer.std_sideboard_licht.switch', '', icon1~'message_socket.png', icon0~'message_socket.png') }}
+    {{ list.switch('eg.wohnen.licht_tv','TV-Backlight','eg.wohnzimmer.std_tv_licht.switch', '', 'message_socket.svg', 'message_socket.svg') }}
+    {{ list.switch('eg.wohnen.licht_sideboard','Sideboard-Backlight','eg.wohnzimmer.std_sideboard_licht.switch', '', 'message_socket.svg', 'message_socket.svg') }}
     {{ list.dimmer('eg.flur_klein.licht_decke', 'Flur', 'eg.flur_klein.licht_decke.switch', 'eg.flur_klein.licht_decke.dim', '', 'eg.flur_klein.pm.sperre') }}
     {{ list.dimmer('eg.flur_gross.licht_decke', 'Hausflur', 'eg.flur_gross.licht_decke.switch', 'eg.flur_gross.licht_decke.dim', '', 'eg.flur_gross.pm.sperre') }}
     {{ list.dimmer('eg.wc.licht_decke', 'Toilette Decke', 'eg.wc.licht_decke.switch', 'eg.wc.licht_decke.dim') }}

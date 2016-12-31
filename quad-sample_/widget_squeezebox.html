@@ -28,16 +28,16 @@
         
         {% if gad_vol %}
         <div class="vol">
-            <img class="slider-bottomup-scale" src="pages/base/pics/scale_buttomup.png">
+            <img class="slider-bottomup-scale" src="pages/base/pics/scale_buttomup.svg">
             {{ basic.slider(id~'vol', gad_vol, 0, 100, 5, 'bottomup') }}
         </div>
         {% endif %}
 
         <div class="control">
-        {% if gad_power %} {{ basic.dual(id~'power', gad_power, icon1~'control_standby.png', icon0~'control_standby.png') }} {% endif %}
-        {% if gad_mute %} {{ basic.dual(id~'mute', gad_mute, icon1~'audio_volume_mute.png', icon0~'audio_volume_mute.png', 1, 0) }} {% endif %}
-        {% if gad_repeat %} {{ basic.dual(id~'repeat', gad_repeat, icon1~'audio_repeat.png', icon0~'audio_repeat.png') }} {% endif %}
-        {% if gad_defaultplaylist %} {{ basic.button(id~'defaultplaylist', gad_defaultplaylist, 'Default Playlist', icon0~'audio_playlist.png', 1) }} {% endif %}
+        {% if gad_power %} {{ basic.dual(id~'power', gad_power, icon1~'control_standby.svg', icon0~'control_standby.svg') }} {% endif %}
+        {% if gad_mute %} {{ basic.dual(id~'mute', gad_mute, icon1~'audio_volume_mute.svg', icon0~'audio_volume_mute.svg', 1, 0) }} {% endif %}
+        {% if gad_repeat %} {{ basic.dual(id~'repeat', gad_repeat, icon1~'audio_repeat.svg', icon0~'audio_repeat.svg') }} {% endif %}
+        {% if gad_defaultplaylist %} {{ basic.button(id~'defaultplaylist', gad_defaultplaylist, 'Default Playlist', icon0~'audio_playlist.svg', 1) }} {% endif %}
         </div>
 
         <div class="title">
@@ -61,11 +61,11 @@
             {% endif %}
 
             <div data-role="controlgroup" data-type="horizontal">
-                {{ basic.button(id~'playlistbackward', gad_playlistbackward, 'backward', icon0~'control_arrow_left.png', 1) }}
-                {{ basic.dual(id~'play', gad_play, icon1~'audio_play.png', icon0~'audio_play.png', 1, 1) }}
-                {{ basic.dual(id~'pause', gad_pause, icon1~'audio_pause.png', icon0~'audio_pause.png') }}
-                {% if gad_stop %} {{ basic.dual(id~'stop', gad_stop, icon1~'audio_stop.png', icon0~'audio_stop.png', 1, 1) }} {% endif %}
-                {{ basic.button(id~'playlistforward', gad_playlistforward, 'forward', icon0~'control_arrow_right.png', 1) }}
+                {{ basic.button(id~'playlistbackward', gad_playlistbackward, 'backward', icon0~'control_arrow_left.svg', 1) }}
+                {{ basic.dual(id~'play', gad_play, icon1~'audio_play.svg', icon0~'audio_play.svg', 1, 1) }}
+                {{ basic.dual(id~'pause', gad_pause, icon1~'audio_pause.svg', icon0~'audio_pause.svg') }}
+                {% if gad_stop %} {{ basic.dual(id~'stop', gad_stop, icon1~'audio_stop.svg', icon0~'audio_stop.svg', 1, 1) }} {% endif %}
+                {{ basic.button(id~'playlistforward', gad_playlistforward, 'forward', icon0~'control_arrow_right.svg', 1) }}
            </div>
        </div>
     </div>

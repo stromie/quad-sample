@@ -39,9 +39,9 @@
 {% macro shifter(id, gad_value, pic, min, max) %}
 
     <span id="{{ uid(page, id) }}" data-widget="visu.shifter" data-item="{{ gad_value }}"
-                data-pic="{{ pic|default(icon0~'light_light_dim_00.png') }}"
+                data-pic="{{ pic|default(icon0~'light_light_dim_00.svg') }}"
         data-min="{{ min|default('0') }}" data-max="{{ max|default('100') }}" class="switch">
-        <img class="icon" src="{{ pic|default(icon0~'light_light_dim_00.png') }}"/>
+        <img class="icon" src="{{ pic|default(icon0~'light_light_dim_00.svg') }}"/>
     </span>
 
 {% endmacro %}
@@ -61,8 +61,8 @@
 
 	<span id="{{ uid(page, id) }}" data-widget="visu.uzsu_icon" data-item="{{ gad_uzsu }}" data-type="{{ type }}"
         data-min="{{ min|default('0') }}" data-max="{{ max|default('255') }}"
-		data-pic-on="{{ pic_on|default(icon1~'time_clock.png') }}" data-pic-off="{{ pic_off|default(icon0~'time_clock.png') }}"
-        class="switch"><a><img class="icon" src="{{ pic_off|default(icon0~'time_clock.png') }}" /></a>
+		data-pic-on="{{ pic_on|default(icon1~'time_clock.svg') }}" data-pic-off="{{ pic_off|default(icon0~'time_clock.svg') }}"
+        class="switch"><a><img class="icon" src="{{ pic_off|default(icon0~'time_clock.svg') }}" /></a>
     </span>
 
 {% endmacro %}
@@ -92,7 +92,7 @@
     <span id="{{ uid(page, id) }}" data-widget="visu.button" data-item="{{ gad_button }}"
                 data-val="{{ val|default('1') }}"
                 class="switch">
-            <div>{{ button_txt|e }}{% if pic %}<a><img class="icon" src="{{ pic|default(icon0~'control_on_off.png') }}"/></a>{% endif %}
+            <div>{{ button_txt|e }}{% if pic %}<a><img class="icon" src="{{ pic|default(icon0~'control_on_off.svg') }}"/></a>{% endif %}
 	    </div>
     </span> 
 {% endmacro %} 
@@ -160,8 +160,8 @@
 
     <span id="{{ uid(page, id) }}" data-widget="visu.activelist" data-item="{{ gad }}"
         data-val-on="{{ val_on|default('1') }}" data-val-off="{{ val_off|default('0') }}"
-         data-pic-on="{{ pic_on|default(icon1~'control_on_off.png') }}"  data-pic-off="{{ pic_off|default(icon0~'control_on_off.png') }}"
-         class="switch"><a><img class="icon" src="{{  pic_off|default(icon0~'control_on_off.png') }}" /></a>{{ txt}}  <br>   </span>
+         data-pic-on="{{ pic_on|default(icon1~'control_on_off.svg') }}"  data-pic-off="{{ pic_off|default(icon0~'control_on_off.svg') }}"
+         class="switch"><a><img class="icon" src="{{  pic_off|default(icon0~'control_on_off.svg') }}" /></a>{{ txt}}  <br>   </span>
 
 {% endmacro %}
 
