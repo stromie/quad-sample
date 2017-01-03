@@ -30,7 +30,8 @@ Wohnen
     {{ list.flip('flip_std_fensterlaibung','Fensterlaibung','eg.wohnzimmer.std_fensterlaibung.switch','uzsu.eg_wohnzimmer_std_fensterlaibung','an','aus') }}
     {{ list.flip('flip_std_buffet','Buffet','eg.esszimmer.std_buffet.switch','uzsu.eg_esszimmer_std_buffet','an','aus') }}
     {{ list.flip('flip_std_giebel','Giebelfenster','eg.esszimmer.std_giebel.switch','uzsu.eg_esszimmer_std_giebel','an','aus') }}
-</ul>
+	{{ list.blind('EG.Wohnen.raffstore1', 'Balkon', 'EG.Wohnen.raffstore1.move', 'EG.Wohnen.raffstore1.stop', 'EG.Wohnen.raffstore1.position', 'EG.Wohnen.raffstore1.shift','EG.Wohnen.raffstore1.angle', 'EG.Wohnen.raffstore1.uzsu' ,'0','100')  }}
+	</ul>
 
 {% endblock %}
 
@@ -39,7 +40,7 @@ Wohnen
 <ul data-role="listview" data-dividertheme="c" class="nw_list">
     <li data-role="list-divider">Verstärker</li>  
     {{ list.slider('volume', 'Volume', 'mm.denon.main.MasterVolume', 0, 25, 1) }}
-    {{ list.mswitch('powe_mute', 'Power / Mute ',['mm.denon.main.Power','mm.denon.main.Mute'], '', ['','icons/or/audio_volume_mute.svg'],['','icons/ws/audio_volume_high.svg'])}}
+    {{ list.mswitch('powe_mute', 'Power / Mute ',['mm.denon.main.Power','mm.denon.main.Mute'], '', ['','audio_volume_mute.svg'],['','audio_volume_high.svg'])}}
 </ul>
 
     /**AVR*/

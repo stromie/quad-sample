@@ -60,6 +60,8 @@ Samples
     {{ list.mmaptext('status_hk_text2', 'mmaptext', ['ebus.status_hk',' ',' '], [['Heizen','Aus','Auto','Eco','Absenken'],' ',' '], [[1, 2, 3, 4, 5],' ',' ']) }}
     {{ list.mmaptext('status_hk_text3', 'Heizbetrieb', ['ebus.status_hk','ebus.status_ww'], [['Heizen','Aus','Auto','Eco','Absenken'],['ens','zwe','dre','vier','fünf']], [[1, 2, 3, 4, 5],[1, 2, 3, 4, 5]]) }}
     
+	<li data-role="list-divider">list slider</li>
+	{{ list.slider('volume', 'Volume', 'mm.denon.main.MasterVolume', 0, 25, 1) }}
 </ul>    
 {% endblock %}
 
@@ -68,9 +70,9 @@ Samples
 
 
 {% block quad_top %}
-{{ visu.activelist('active1', 'eg.flur_klein.licht_decke.switch', 'Flur klein', 'light_light.svg', 'light_light.svg') }}
-{{ visu.activelist('active2', 'eg.flur_gross.licht_decke.switch', 'Flur gross', 'light_light.svg', 'light_light.svg') }}
-{{ visu.activelist('active3',  'eg.wohnzimmer.std_sideboard_licht.switch', 'Sideboard',  'message_socket.svg', 'message_socket.svg', '1', '0') }}
+{{ visu.activelist('active1', 'eg.flur_klein.licht_decke.switch', 'Flur klein', 'icons/ws/light_light.svg', 'icons/ws/light_light.svg') }}
+{{ visu.activelist('active2', 'eg.flur_gross.licht_decke.switch', 'Flur gross', 'icons/ws/light_light.svg', 'icons/ws/light_light.svg') }}
+{{ visu.activelist('active3',  'eg.wohnzimmer.std_sideboard_licht.switch', 'Sideboard',  'icons/ws/message_socket.svg', 'icons/ws/message_socket.svg', '1', '0') }}
 {% endblock %}
 
 {% block quad_bottom %}

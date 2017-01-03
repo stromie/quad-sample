@@ -32,7 +32,7 @@
 {% macro lbutton(id, gad_short, gad_long, pic, val) %} 
     <span id="{{ uid(page, id) }}" data-widget="visu.button" data-item="{{ gad_short }},{{ gad_long }}"
                 data-val="{{ val|default('1') }}"
-                class="switch"><a><img class="icon" src="{{ pic }}"/></a>
+                class="switch"><a><img class="icon" src="{{ icon0 }}{{ pic }}"/></a>
     </span> 
 {% endmacro %} 
 

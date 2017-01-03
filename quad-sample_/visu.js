@@ -129,7 +129,7 @@ $(document).delegate('[data-widget="visu.percent"]', {
 $(document).delegate('[data-widget="visu.button"]', {
         'vmousedown': function(event) { // Short/Long Button
             event.preventDefault();
-	    var items = widget.explode($(this).attr('data-item'));
+        var items = widget.explode($(this).attr('data-item'));
             var obj = this;
             $(obj).attr('data-timer',
                 setTimeout(function() {
@@ -140,16 +140,16 @@ $(document).delegate('[data-widget="visu.button"]', {
         },
         'vmouseup': function() { // Short/Long Button
             clearTimeout($(this).attr('data-timer'))
-	    var items = widget.explode($(this).attr('data-item'));
+        var items = widget.explode($(this).attr('data-item'));
             if ($(this).attr('data-long') == 'true') {
                 $(this).attr('data-long', false);
             } else {
-	        io.write(items[0], $(this).attr('data-val'));
+            io.write(items[0], $(this).attr('data-val'));
             }
         },
         'click': function(event) {
-        
-	}
+
+    }
 });
 
 // ----- visu.shifter ----------------------------------------------------------

@@ -219,7 +219,20 @@
     </li>
 {% endmacro %}
 
-
+/**
+ * Standard blind
+ *
+ * @param id    unique id for this widget
+ * @param txt   name of the blind
+ * @param move  a gad/item for the up- and down- movement
+ * @param pos   a gad/item for stopping the movement (optional)
+ * @param shift a gad/item for the actual absolute position of the blinds
+ * @param angle a gad/item for increase- and decreace- of the blade (optional)
+ * @param uzsu  a gad/item fpr UZSU
+ * @param       the minimum value for close (optional, default 0)
+ * @param       the maximum value for open (optional, default 255)
+ * @param       step between two values (optional, default 5)
+ */
 {% macro blind(id, txt, gad_move, gad_stop, gad_pos, gad_shift, gad_angle, gad_uzsu, min, max, step, mode) %}
     {% import "basic.html" as basic %}
     {% import "icon.html" as icon %}
@@ -231,19 +244,19 @@
         <div class="no_border">
             <div class="nw_table">
                 <div>
-                    {{ visu.lbutton(id, gad_stop, gad_move, icon0~'control_arrow_down.svg', 1) }}
+                    {{ visu.lbutton(id, gad_stop, gad_move, 'control_arrow_down.svg', 1) }}
                 </div>
                 <div>
-                    {{ visu.lbutton(id, gad_stop, gad_move, icon0~'control_arrow_up.svg', 0) }}
+                    {{ visu.lbutton(id, gad_stop, gad_move, 'control_arrow_up.svg', 0) }}
                 </div>
             </div>
         </div>
         <div>
             <a href="#{{ uid(page, id) }}_list_blind_popup" data-rel="popup" data-position-to="window">
-                {{ icon.blind(id~'list_blind_shifter', '', gad_pos, 0, 255, gad_angle) }}
+                {{ icon.shutter(id~'list_blind_shifter', '', gad_pos, 0, 100, gad_angle) }}
             </a>
-            {{ popup.blind(uid(page, id)~'_list_blind_popup', txt, gad_move, gad_stop, gad_pos, gad_shift, gad_angle, gad_saved, min, max, step, mode) }}
-        </div>
+				{{ popup.blind(uid(page, id)~'_list_blind_popup', txt, gad_move, gad_stop, gad_pos, gad_shift, gad_angle, min, max, step, mode) }}
+		</div>
         <div class="landscape">
 {% if gad_uzsu %}
             {{ visu.uzsu_icon(id~'list_uzsu', 'percent', gad_uzsu, min, max) }}
@@ -252,6 +265,14 @@
     </div>
     </li>
 {% endmacro %}
+
+  <a href="#{{ uid(page, id) }}_list_dimmerEx_popup" data-rel="popup" data-position-to="window">
+                
+            </a>
+            {{ popup.dimmerEx(uid(page, id)~'_list_dimmerEx_popup', txt, gad_switch, gad_value, pic_on, pic_off, min, max, step) }}
+        </div>
+
+
 
 {% macro rtr(id, txt, gad_actual, gad_valve, gad_set_value, gad_set, gad_comfort, gad_night, gad_frost, gad_state, gad_txt, step) %}
     {% import "basic.html" as basic %}
@@ -517,8 +538,8 @@
     <div class="nw_table">
         <div class="text">{{ txt|e }}</div>
         <div class="table-slider">
-            {{ visu.slider(id~'list_slider', gad, min, max, step, mode) }}
-        </div>
+		{{ visu.slider(id~'list_slider', gad, min, max, step, mode) }}        
+		</div>
     </div>
     </li>
 {% endmacro %}
